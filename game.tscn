@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://ekgfxm6d8lg7"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_40kts"]
-[ext_resource type="PackedScene" uid="uid://dufv63pbqfic6" path="res://player.tscn" id="1_41awj"]
-[ext_resource type="PackedScene" uid="uid://bawx6rnq7kppy" path="res://spawner_enemy.tscn" id="3_im8ph"]
+[ext_resource type="PackedScene" uid="uid://dufv63pbqfic6" path="res://player/player.tscn" id="1_41awj"]
+[ext_resource type="PackedScene" uid="uid://bawx6rnq7kppy" path="res://spawner/spawner_enemy.tscn" id="3_im8ph"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_40kts")

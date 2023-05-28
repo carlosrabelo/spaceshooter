@@ -1,6 +1,8 @@
 extends Area2D
 
-@onready var plBullet = preload("res://bullet.tscn")
+class_name Player
+
+@onready var plBullet = preload("res://bullet/bullet_1.tscn")
 
 @onready var muzzle1 = $Marker2D1
 @onready var muzzle2 = $Marker2D2

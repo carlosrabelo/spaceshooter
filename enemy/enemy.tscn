@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://byt5v04ahhshk"]
+[gd_scene load_steps=8 format=3 uid="uid://byt5v04ahhshk"]
 
-[ext_resource type="Script" path="res://enemy.gd" id="1_40p55"]
-[ext_resource type="Texture2D" uid="uid://c13o1mec81iy5" path="res://enemy.png" id="1_sty8t"]
+[ext_resource type="Script" path="res://enemy/enemy.gd" id="1_051hx"]
+[ext_resource type="Texture2D" uid="uid://c13o1mec81iy5" path="res://enemy/enemy.png" id="2_lnypl"]
+[ext_resource type="PackedScene" uid="uid://bljqfs5mel70n" path="res://enemy/enemy_gun.tscn" id="3_nh8fv"]
 
 [sub_resource type="Animation" id="Animation_wrvpa"]
 resource_name = "Idle"
@@ -45,10 +46,10 @@ _data = {
 size = Vector2(36, 36)
 
 [node name="Enemy" type="Area2D"]
-script = ExtResource("1_40p55")
+script = ExtResource("1_051hx")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_sty8t")
+texture = ExtResource("2_lnypl")
 hframes = 4
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -61,6 +62,9 @@ libraries = {
 shape = SubResource("RectangleShape2D_o7ka4")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[node name="EnemyGun" parent="." instance=ExtResource("3_nh8fv")]
+position = Vector2(0, 30)
 
 [connection signal="screen_entered" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

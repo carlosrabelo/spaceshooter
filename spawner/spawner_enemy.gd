@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var plEnemy = preload("res://enemy.tscn")
+@onready var plEnemy = preload("res://enemy/enemy.tscn")
 
 @onready var timer = $Timer
 
