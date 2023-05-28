@@ -10,9 +10,6 @@ func _ready():
 	vr = get_viewport_rect().size
 	timer.start()
 
-func _process(delta):
-	pass
-
 func _on_timer_timeout():
 	spawn_enemies()
 	timer.start()

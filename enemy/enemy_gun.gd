@@ -8,9 +8,6 @@ extends Node2D
 func _ready():
 	timer.start()
 
-func _process(delta):
-	pass
-
 func _on_timer_timeout():
 	var bullet = plBullet.instantiate()
 	bullet.position = global_position
